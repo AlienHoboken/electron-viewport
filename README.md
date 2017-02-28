@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/electron-viewport.svg)]() [![npm](https://img.shields.io/npm/dt/electron-viewport.svg)]() [![npm](https://img.shields.io/npm/l/electron-viewport.svg)]()
+
 # electron-viewport
 electron-viewport helps scale and emulate viewports. To use electron-viewport, first install it
 

@@ -1,7 +1,7 @@
 {
   "name": "electron-viewport",
   "version": "1.0.0",
-  "description": "A helper for scaling electron windows and emulating devices",
+  "description": "Helps scale and emulate viewports in Electron",
   "main": "viewport.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
