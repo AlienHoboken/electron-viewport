@@ -1,7 +1,7 @@
 [![npm](https://img.shields.io/npm/v/electron-viewport.svg)]() [![npm](https://img.shields.io/npm/dt/electron-viewport.svg)]() [![npm](https://img.shields.io/npm/l/electron-viewport.svg)]()
 
 # electron-viewport
-electron-viewport helps scale and emulate viewports. To use electron-viewport, first install it
+electron-viewport helps emulate and scale viewports. Viewport can emulate a device viewport, such as emulating a phone device or 4k display, and can scale a window (maintaining aspect ratio) to fit on screen.
 
 ### Installation
 `npm install --save electron-viewport`
@@ -33,13 +33,14 @@ Creates and returns a [BrowserWindow](https://github.com/electron/electron/blob/
 ### Getting scaled width and height
 
 ```javascript
-var { width, height } = require('./viewport.js')(width, height)
+var { width, height } = require('electron-viewport')(width, height)
 ```
+Simply returns scaled dimensions so you may create your own window.
 
 ### Creating a scaled window
 
 ```javascript
-var viewport = require('./viewport.js')(width, height)
+var viewport = require('electron-viewport')(width, height)
 var mainWindow = viewport.getWindow()
 ```
 Creates a scaled BrowserWindow which fits on screen, with the width and height specified.
@@ -47,7 +48,7 @@ Creates a scaled BrowserWindow which fits on screen, with the width and height s
 ### Scaled window with device emulation
 
 ```javascript
-var viewport = require('./viewport.js')(deviceWidth, deviceHeight, true)
+var viewport = require('electron-viewport')(deviceWidth, deviceHeight, true)
 var mainWindow = viewport.getWindow()
 ```
 Creates a scaled BrowserWindow which fits on screen, with device emulation enabled for the passed width and height.
@@ -56,7 +57,7 @@ Creates a scaled BrowserWindow which fits on screen, with device emulation enabl
 
 ```javascript
 var options = { frame: false } //specify your BrowserWindow options here, just an example
-var viewport = require('./viewport.js')(width, height, options)
+var viewport = require('electron-viewport')(width, height, options)
 var mainWindow = viewport.getWindow()
 ```
 Creates a scaled BrowserWindow which fits on screen, with the given [BrowserWindow options](https://github.com/electron/electron/blob/master/docs/api/browser-window.md) being passed
@@ -65,7 +66,7 @@ Creates a scaled BrowserWindow which fits on screen, with the given [BrowserWind
 
 ```javascript
 var options = { frame: false } //specify your BrowserWindow options here, just an example
-var viewport = require('./viewport.js')(width, height, true, options)
+var viewport = require('electron-viewport')(width, height, true, options)
 var mainWindow = viewport.getWindow()
 ```
 
